@@ -6,12 +6,14 @@
  */
 
 import { existsSync, readFileSync } from 'node:fs'
+import os from 'node:os'
 import { XiaoyiWorkAuthPlugin, _internal } from './index.mjs'
 
 const wantStream = process.argv.includes('--stream')
 
 const fakeInput = {
-  directory: process.cwd(),
+  // 用临时目录：别把运行期状态（xiaoyi-points-state.json）写进仓库
+  directory: process.env.XY_TEST_DIR || os.tmpdir(),
   magpie: { option: {}, options: {} },
   client: { app: { log: () => {} } },
 }
