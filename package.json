@@ -24,6 +24,18 @@
     "vision"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NekoYume517/opencode-xiaoyiwork-auth.git"
+  },
+  "homepage": "https://github.com/NekoYume517/opencode-xiaoyiwork-auth#readme",
+  "bugs": {
+    "url": "https://github.com/NekoYume517/opencode-xiaoyiwork-auth/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "magpie": {
     "name": "小艺Work",
     "summary": {
