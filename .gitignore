@@ -1,0 +1,7 @@
+node_modules/
+*.log
+*.tgz
+.DS_Store
+session.json
+credential.json
+secret-backup-*.txt
