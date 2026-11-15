@@ -84,7 +84,7 @@ const DEFAULT_MODELS = {
     tool_call: true,
     rate: 'x1',
     modalities: { input: ['text'], output: ['text'] },
-    limit: { context: 128000, output: 32000 },
+    limit: { context: 256000, output: 32000 },
   },
   'DeepSeek_V4.1_Flash_VE': {
     name: 'DeepSeek-V4.1-Flash',
@@ -92,7 +92,7 @@ const DEFAULT_MODELS = {
     tool_call: true,
     rate: 'x1',
     modalities: { input: ['text', 'image'], output: ['text'] },
-    limit: { context: 128000, output: 32000 },
+    limit: { context: 256000, output: 32000 },
   },
   'LLM_GLM5.3': {
     name: 'GLM-5.3',
@@ -100,7 +100,7 @@ const DEFAULT_MODELS = {
     tool_call: true,
     rate: 'x8',
     modalities: { input: ['text'], output: ['text'] },
-    limit: { context: 200000, output: 32768 },
+    limit: { context: 256000, output: 32768 },
   },
   'GLM_5.3_FLASH_VE': {
     name: 'GLM-5.3-Flash',
@@ -108,7 +108,7 @@ const DEFAULT_MODELS = {
     tool_call: true,
     rate: 'x0.8',
     modalities: { input: ['text', 'image'], output: ['text'] },
-    limit: { context: 200000, output: 32768 },
+    limit: { context: 256000, output: 32768 },
   },
   'MiniMax_M3.1_Flash': {
     name: 'MiniMax M3.1 Flash',
@@ -116,7 +116,7 @@ const DEFAULT_MODELS = {
     tool_call: true,
     rate: 'x1',
     modalities: { input: ['text', 'image'], output: ['text'] },
-    limit: { context: 200000, output: 32768 },
+    limit: { context: 256000, output: 32768 },
   },
   'Kimi_K3.1_Pro_VE': {
     name: 'Kimi K3.1 Pro',
@@ -124,7 +124,7 @@ const DEFAULT_MODELS = {
     tool_call: true,
     rate: 'x13',
     modalities: { input: ['text', 'image'], output: ['text'] },
-    limit: { context: 200000, output: 32768 },
+    limit: { context: 256000, output: 32768 },
   },
   'OpenPanguV2-Pro': {
     name: 'openPangu-2.1-Pro',
@@ -132,13 +132,13 @@ const DEFAULT_MODELS = {
     tool_call: true,
     rate: 'x1',
     modalities: { input: ['text'], output: ['text'] },
-    limit: { context: 128000, output: 32000 },
+    limit: { context: 256000, output: 32000 },
   },
   'Auto-Model': {
     name: 'Auto-Model',
     tool_call: true,
     modalities: { input: ['text'], output: ['text'] },
-    limit: { context: 128000, output: 32000 },
+    limit: { context: 256000, output: 32000 },
   },
 }
 
@@ -1418,7 +1418,7 @@ export const XiaoyiWorkAuthPlugin = async (input) => {
             name: item.name,
             tool_call: true,
             reasoning: true,
-            limit: { context: 128000, output: 32000 },
+            limit: { context: 256000, output: 32000 },
           }
           const { status, ...rest } = base
           out[item.id] = {
